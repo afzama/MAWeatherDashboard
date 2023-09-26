@@ -1,0 +1,33 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(201, 248, 248);
+}
+
+h1 { 
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    display: flex;
+    text-align: center;     
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+nav button a {
+display: block;
+width: 60px;
+}
+/*Change the link color on hover*/
+nav button a:hover {
+    background-color: blue;
+    color: white;
+}
