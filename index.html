@@ -12,10 +12,13 @@
   <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
+    <header>
 <h1 id="page-title">Weather Dashboard</h1>
+<div class="sidebar">
 <h2>Search for City</h2>
 <input id="citysearch"></input>
 <button>Search</button>
+</div>
     <nav>
         <button><a>Toronto</a></button>
         <button><a>New York</a></button>
@@ -24,10 +27,11 @@
         <button><a>Denver</a></button>
         <button><a>San Francisco</a></button>
     </nav>
+</header>
 <main>
     
     <div class="city-container">
-    <h2 class="selectcity" id="clickcity">Atlanta</h2>
+    <h2 class="selectcity" id="city-name">City Name</h2>
     <div id="date-0">Date</div>
     <div id="temp">Temperature:</div>
     <div id="wind">Wind:</div>
@@ -35,7 +39,7 @@
     </div>
 
     <h2 class="selectcity" id="forec">5-Day Forecast</h2>
-    <div class="card-container">
+    <div class="card-container" id="forecast-cards">
         <div class="card">
     <div class="card-body" id="date-1">Date</div>
     <h2 class="card-title">Card title</h2>

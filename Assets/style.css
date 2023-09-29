@@ -1,20 +1,79 @@
-html{
+html {
     height: 100%;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
 
-body{
-    margin: auto;
+body {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(201, 248, 248);
+    display: flex;
+    flex-direction: column; /* Change to column to align header and main vertically */
+    height: 100vh;
+}
+
+header {
+    flex: 1; /* Takes up 25% of the page */
+    display: flex;
+    flex-direction: column; /* Display the header items vertically */
+    justify-content: flex-start; /* Align items to the top of the header */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid blue;  
+}
+
+h1 {
+    margin: 0;
+    align-self: flex-start; /* Align the h1 to the left */
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Display the buttons vertically */
+}
+
+nav button {
+    margin-bottom: 10px; /* Add some spacing between buttons */
+}
+
+main {
+    flex: 3; /* Takes up 75% of the page */
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .city-container {
     border: 2px solid black;
     padding: 10px;
+}
+
+/* Add styling for city buttons and other elements as needed */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav button a {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav button a:hover {
+    background-color: blue;
+    color: white;
 }
 
 /* Add styles for the card container and cards */
@@ -41,3 +100,4 @@ body{
 .card-text {
     font-size: 0.9em;
 }
+
