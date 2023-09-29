@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
 <h1 id="page-title">Weather Dashboard</h1>
@@ -19,49 +25,56 @@
         <button><a>San Francisco</a></button>
     </nav>
 <main>
+    
+    <div class="city-container">
     <h2 class="selectcity" id="clickcity">Atlanta</h2>
-    <container>
     <div id="date-0">Date</div>
     <div id="temp">Temperature:</div>
     <div id="wind">Wind:</div>
     <div id="humid">Humidity:</div>
-    </container>
+    </div>
 
     <h2 class="selectcity" id="forec">5-Day Forecast</h2>
-    <container id="card">
-    <div id="date-1">Date</div>
-    <div id="temp">Temperature:</div>
-    <div id="wind">Wind:</div>
-    <div id="humid">Humidity:</div>
-    </container>
+    <div class="card-container">
+        <div class="card">
+    <div class="card-body" id="date-1">Date</div>
+    <h2 class="card-title">Card title</h2>
+    <div class="card-text" id="temp">Temperature:</div>
+    <div class="card-text" id="wind">Wind:</div>
+    <div class="card-text" id="humid">Humidity:</div>
+</div>
 
-    <container id="card">
-        <div id="date-2">Date</div>
-        <div id="temp">Temperature:</div>
-        <div id="wind">Wind:</div>
-        <div id="humid">Humidity:</div>
-    </container>
+    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+        <div class="card-body" id="date-2">Date</div>
+        <h2 class="card-title">Card title</h2>
+        <p class="card-text" id="temp">Temperature:</p>
+        <p class="card-text" id="wind">Wind:</p>
+        <p class="card-text" id="humid">Humidity:</p>
+    </div>
 
-    <container id="card">
-        <div id="date-3">Date</div>
-        <div id="temp">Temperature:</div>
-        <div id="wind">Wind:</div>
-        <div id="humid">Humidity:</div>
-    </container>
+    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+        <div class="card-body" id="date-3">Date</div>
+        <h2 class="card-title">Card title</h2>
+        <p class="card-text" id="temp">Temperature:</p>
+        <p class="card-text" id="wind">Wind:</p>
+        <p class="card-text" id="humid">Humidity:</p>
+    </div>
 
-    <container id="card">
-        <div id="date-4">Date</div>
-        <div id="temp">Temperature:</div>
-        <div id="wind">Wind:</div>
-        <div id="humid">Humidity:</div>
-    </container>
+    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+        <div class="card-body" id="date-4">Date</div>
+        <h2 class="card-title">Card title</h2>
+        <p class="card-text" id="temp">Temperature:</p>
+        <p class="card-text" id="wind">Wind:</p>
+        <p class="card-text" id="humid">Humidity:</p>
+    </div>
 
-    <container id="card">
-        <div id="date-5">Date</div>
-        <div id="temp">Temperature:</div>
-        <div id="wind">Wind:</div>
-        <div id="humid">Humidity:</div>
-    </container>
+    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+        <div class="card-header" id="date-5">Date</div>
+        <h2 class="card-title">Card title</h2>
+        <p class="card-text" id="temp">Temperature:</p>
+        <p class="card-text" id="wind">Wind:</p>
+        <p class="card-text" id="humid">Humidity:</p>
+    </div>
 </main>
 </body>
 </html>

@@ -1,33 +1,43 @@
 html{
     height: 100%;
 }
+*{
+    box-sizing: border-box;
+}
 
 body{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(201, 248, 248);
 }
 
-h1 { 
-    width: 96%;
-    margin: 0 auto;
-    padding: 2.5rem;
-    display: flex;
-    text-align: center;     
+.city-container {
+    border: 2px solid black;
+    padding: 10px;
 }
 
-nav {
-    margin: 0;
-    padding: 0;
-    width: 200px;
+/* Add styles for the card container and cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-nav button a {
-display: block;
-width: 60px;
+
+.card {
+    flex: 0 1 calc(20% - 20px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
 }
-/*Change the link color on hover*/
-nav button a:hover {
-    background-color: blue;
-    color: white;
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9em;
 }
