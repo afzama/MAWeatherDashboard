@@ -1,86 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <script
-    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="./Assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
     <header>
-<h1 id="page-title">Weather Dashboard</h1>
-<div class="sidebar">
-<h2>Search for City</h2>
-<input id="citysearch"></input>
-<button>Search</button>
-</div>
-    <nav>
-        <button><a>Toronto</a></button>
-        <button><a>New York</a></button>
-        <button><a>Chicago</a></button>
-        <button><a>Seattle</a></button>
-        <button><a>Denver</a></button>
-        <button><a>San Francisco</a></button>
-        <div id="search-history"></div>
-    </nav>
-</header>
-<main>
-    
-    <div class="city-container">
-    <h2 class="selectcity" id="city-name">City Name</h2>
-    <div id="date-0">Date</div>
-    <div id="temp-0">Temperature:</div>
-    <div id="wind-0">Wind:</div>
-    <div id="humid-0">Humidity:</div>
-    </div>
+        <h1 id="page-title">Weather Dashboard</h1>
+        <div class="sidebar">
+            <h2>Search for City</h2>
+            <input id="citysearch"></input>
+            <button id="search-button">Search</button>
+        </div>
+        <nav id="search-history">
+            <button><a>Toronto</a></button>
+            <button><a>New York</a></button>
+            <button><a>Chicago</a></button>
+            <button><a>Seattle</a></button>
+            <button><a>Denver</a></button>
+            <button><a>San Francisco</a></button>
+        </nav>
+    </header>
+    <main>
 
-    <h2 class="selectcity" id="forec">5-Day Forecast</h2>
-    <div class="card-container" id="forecast-cards">
-        <div class="card">
-    <div class="card-body" id="date-1">Date</div>
-    <h2 class="card-title">Card title</h2>
-    <div class="card-text" id="temp-1">Temperature:</div>
-    <div class="card-text" id="wind-1">Wind:</div>
-    <div class="card-text" id="humid-1">Humidity:</div>
-</div>
+        <div class="city-container">
+            <h2 class="selectcity" id="city-name">City Name</h2>
+            <p class="card-text" id="date-0">Date</p>
+            <p class="card-text" id="temp-0">Temperature:</p>
+            <p class="card-text" id="wind-0">Wind:</p>
+            <p class="card-text" id="humid-0">Humidity:</p>
+        </div>
 
-    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-        <div class="card-body" id="date-2">Date</div>
-        <h2 class="card-title">Card title</h2>
-        <p class="card-text" id="temp-2">Temperature:</p>
-        <p class="card-text" id="wind-2">Wind:</p>
-        <p class="card-text" id="humid-2">Humidity:</p>
-    </div>
-
-    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-        <div class="card-body" id="date-3">Date</div>
-        <h2 class="card-title">Card title</h2>
-        <p class="card-text" id="temp-3">Temperature:</p>
-        <p class="card-text" id="wind-3">Wind:</p>
-        <p class="card-text" id="humid-3">Humidity:</p>
-    </div>
-
-    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-        <div class="card-body" id="date-4">Date</div>
-        <h2 class="card-title">Card title</h2>
-        <p class="card-text" id="temp-4">Temperature:</p>
-        <p class="card-text" id="wind-4">Wind:</p>
-        <p class="card-text" id="humid-4">Humidity:</p>
-    </div>
-
-    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-        <div class="card-header" id="date-5">Date</div>
-        <h2 class="card-title">Card title</h2>
-        <p class="card-text" id="temp-5">Temperature:</p>
-        <p class="card-text" id="wind-5">Wind:</p>
-        <p class="card-text" id="humid-5">Humidity:</p>
-    </div>
-</main>
-<script src="./script.js"></script>
+        <h2 class="selectcity" id="forec">5-Day Forecast</h2>
+        <div class="card-container" id="forecast-cards"></div>
+            
+    </main>
+    <script src="./script.js"></script>
 </body>
+
 </html>
