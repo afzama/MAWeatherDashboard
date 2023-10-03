@@ -10,25 +10,32 @@ function fetchWeatherData(cityName) {
         .then(data => {
             console.log('Weather data:', data);
             updateWeatherInfo(data);
-            addToSearchHistory(data.name);
+            addToSearchHistory(data.cityName);
             displaySearchHistory();
         })
         .catch(error => console.log("Error fetching weather data: ", error));
 }
-
+//update the weather data on page under its respective headings
 function updateWeatherInfo(data) {
     document.getElementById("city-name").innerText = data.name;
     const todayDate = new Date(data.dt * 1000).toLocaleDateString();
+    document.getElementById("icon-0").innerHTML = `<img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather Icon">`;
     document.getElementById("date-0").innerText = "Date: " + new Date(data.dt * 1000).toLocaleDateString();
-    document.getElementById("temp-0").innerText = "Temperature: " + data.main.temp + "°C";
+    document.getElementById("temp-0").innerText = "Temperature: " + (data.main.temp - 273.15).toFixed(2) + "°C";
     document.getElementById("wind-0").innerText = "Wind: " + data.wind.speed + " m/s";
     document.getElementById("humid-0").innerText = "Humidity: " + data.main.humidity + "%";
 }
-
-function addToSearchHistory(cityName) {
-    // Add the city to the search history array
+//Add searched city to the search history
+function addToSearchHistory(data, cityName) {
     searchHistory.push(cityName);
     localStorage.setItem('searchhistory', searchHistory);
+
+    // Display weather icon
+    const iconElement = document.getElementById("icon-0");
+    if (data.weather[0] && data.weather[0].icon) {
+        const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        iconElement.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`;
+    }
 }
 
 function displaySearchHistory() {
@@ -41,6 +48,7 @@ function displaySearchHistory() {
             button.innerText = city;
             button.addEventListener("click", () => {
                 fetchWeatherData(city);
+                displayFiveDayForecast(city);
             });
             searchHistoryElement.appendChild(button);
         });
@@ -48,6 +56,7 @@ function displaySearchHistory() {
         console.error("Element with ID 'search-history' not found.");
     }
 }
+
 
 //retrieve weather forecast data for next 5 days
 function displayFiveDayForecast(cityName) {
@@ -67,10 +76,18 @@ function displayFiveDayForecast(cityName) {
                 card.innerHTML = `
                     <div class="card-body" id="${dateId}">Date: ${date}</div>
                     <h2 class="selectcity">City: ${cityName}</h2>
-                    <p class="card-text" id="temp">Temperature: ${forecastDays[i].main.temp}°C</p>
+                    <p class="card-text" id="temp">Temperature: ${(forecastDays[i].main.temp - 273.15).toFixed(2)}°C</p>
                     <p class="card-text" id="wind">Wind: ${forecastDays[i].wind.speed} m/s</p>
                     <p class="card-text" id="humid">Humidity: ${forecastDays[i].main.humidity}%</p>
                 `;
+                // Display weather icon for each day
+                const iconElement = document.createElement("div");
+                iconElement.classList.add("weather-icon");
+                if (forecastDays[i].weather[0] && forecastDays[i].weather[0].icon) {
+                    const iconUrl = `https://openweathermap.org/img/w/${forecastDays[i].weather[0].icon}.png`;
+                    iconElement.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`;
+                    card.appendChild(iconElement);
+                }
                 forecastContainer.appendChild(card);
             }
         })

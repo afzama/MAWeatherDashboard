@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./Assets/style.css">
-</head>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./Assets/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 id="page-title">Weather Dashboard</h1>
-        <div class="sidebar">
-            <h2>Search for City</h2>
-            <input id="citysearch"></input>
-            <button id="search-button">Search</button>
-        </div>
-        <nav id="search-history">
-            <button><a>Toronto</a></button>
-            <button><a>New York</a></button>
-            <button><a>Chicago</a></button>
-            <button><a>Seattle</a></button>
-            <button><a>Denver</a></button>
-            <button><a>San Francisco</a></button>
-        </nav>
+      <h1 id="page-title">Weather Dashboard</h1>
+      <div class="sidebar">
+        <h2>Search for City</h2>
+        <input id="citysearch" /></input>
+        <button id="search-button">Search</button>
+      </div>
+      <nav id="search-history">
+        <button>Toronto</button>
+        <button>New York</button>
+        <button>Chicago</button>
+        <button>Seattle</button>
+        <button>Denver</button>
+        <button>San Francisco</button>
+      </nav>
     </header>
     <main>
+      <div class="city-container">
+        <h2 class="selectcity" id="city-name">City Name</h2>
+        <i class="condition-icon" id="icon-0">Icon:</i>
+        <p class="card-text" id="date-0">Date:</p>
+        <p class="card-text" id="temp-0">Temperature:</p>
+        <p class="card-text" id="wind-0">Wind:</p>
+        <p class="card-text" id="humid-0">Humidity:</p>
+      </div>
 
-        <div class="city-container">
-            <h2 class="selectcity" id="city-name">City Name</h2>
-            <p class="card-text" id="date-0">Date</p>
-            <p class="card-text" id="temp-0">Temperature:</p>
-            <p class="card-text" id="wind-0">Wind:</p>
-            <p class="card-text" id="humid-0">Humidity:</p>
-        </div>
-
-        <h2 class="selectcity" id="forec">5-Day Forecast</h2>
-        <div class="card-container" id="forecast-cards"></div>
-            
+      <h2 class="selectcity" id="forec">5-Day Forecast</h2>
+      <div class="card-container" id="forecast-cards"></div>
     </main>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
