@@ -15,4 +15,4 @@ This respository contains HTML, CSS and Javascript and uses the weather api to f
 https://github.com/afzama/MAWeatherDashboard
 
 ## Published Github Page
-
+https://afzama.github.io/MAWeatherDashboard/
